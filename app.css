@@ -1,0 +1,59 @@
+body{
+	background: #000;
+}
+ul,li{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style: none;
+	color: #0095ff;
+}
+
+.app{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 320px;
+	height: 320px;
+
+	animation: rotate 10s infinite linear;
+}
+.app li{
+	float: left;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	margin: 0px;
+	border-radius: 8px;
+	transition: .3s cubic-bezier(0.44, 0.74, 0.9, 1.21);
+	transiform: translateZ(0);
+	animation: breath 1s infinite alternate cubic-bezier(0.4, 0, 0.49, 0.88);
+}
+
+
+.line{
+	transform: translateY(80px);
+}
+
+@-webkit-keyframes rotate{
+	0%{
+		transform: rotate(0);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes breath{
+	0%{
+		box-shadow: 0 0 2px #0095ff;
+	}
+	100%{
+		box-shadow: 0 0 20px #0095ff;
+	}
+}
